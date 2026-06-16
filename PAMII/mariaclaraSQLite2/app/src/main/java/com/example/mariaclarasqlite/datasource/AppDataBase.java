@@ -1,5 +1,6 @@
 package com.example.mariaclarasqlite.datasource;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -27,5 +28,18 @@ public class AppDataBase extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    /* Esse metodo insert é um método da classe SqliteOpenHelper
+        Ela pega um nome de tabela e um objt ContentValues e tenta inserir
+        o registro na tabela. Se conseguir, retorno maior que zero e o retorno
+        fica verdadeiro.
+        Esse retorno é retornado para o controller que emite uma mensagem ao usuario
+        se conseguiu ou não inserir o registro */
+
+    public boolean insert(String tabela, ContentValues dados){
+        db=getWritableDatabase();
+        boolean retorno = false;
+        return db.insert(tabela, null, dados) > 0;
     }
 }

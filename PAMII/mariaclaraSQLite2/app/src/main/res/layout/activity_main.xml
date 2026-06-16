@@ -7,13 +7,83 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="412dp"
+        android:layout_height="731dp"
+        app:srcCompat="@drawable/download"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textView2"
+        android:layout_width="209dp"
+        android:layout_height="26dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="Cadastro de  Cliente"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
+        android:background="#D7CBE4"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="   Digite o Nome"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="177dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
+        android:background="#D7CBE4"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="   Digite o Email"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="274dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTelefone"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
+        android:background="#D7CBE4"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="   Digite o Telefone"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="374dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="146dp"
+        android:layout_height="46dp"
+        android:background="#544FCA"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:background="#8D73B8"
+        android:text="Voltar"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="501dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
