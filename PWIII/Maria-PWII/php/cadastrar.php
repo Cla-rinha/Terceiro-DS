@@ -36,23 +36,79 @@ if(isset($_POST["nome"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Usuario</title>
+    <title>Cadastrar Usuário</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #f2f2f2;
+        }
+
+        .cadastro-box{
+            width: 400px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>Cadastro de Usuario</h2>
+<div class="cadastro-box">
 
-    <form method = "post" action = "cadastrar.php">
-        <input type = "text" name = "nome" placeholder = "Digite seu nome:"> <br>
-        <input type = "email" name = "email" placeholder = "Digite seu email:"> <br>
-        <input type = "password" name = "senha" placeholder = "Digite sua senha"> <br>
-        <input type = "submit" id = "btnCadastro" value = "Cadastrar"> <br>
-        <a href="index.php">Já tem uma conta? Clique aqui para logar</a>
+    <h2 class="text-center mb-4">Cadastro de Usuário</h2>
+
+    <form method="post" action="cadastrar.php">
+
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input
+                type="text"
+                name="nome"
+                class="form-control"
+                placeholder="Digite seu nome"
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">E-mail</label>
+            <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Digite seu e-mail"
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Senha</label>
+            <input
+                type="password"
+                name="senha"
+                class="form-control"
+                placeholder="Digite sua senha"
+                required>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">
+            Cadastrar
+        </button>
+
+        <p class="text-center mt-3">
+            Já tem uma conta?
+            <a href="index.php">Faça login</a>
+        </p>
+
     </form>
-    
+
+</div>
+
 </body>
 </html>
-
-
-
-

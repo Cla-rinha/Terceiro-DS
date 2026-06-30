@@ -59,4 +59,13 @@ class Usuario{
         //fetchAll retorna uma matriz: |id|nome|email|senha| - |01|admin|admin@gmail.com|1234| - (...)
         
     }
+
+    public function localizarUsuario($id){
+        $sql = "SELECT * FROM usuarios WHERE id = :d";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(":d", $id);
+        $stmt->execute();
+        return $stmt->fetch();
+
+    }
 }
