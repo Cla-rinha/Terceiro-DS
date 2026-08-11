@@ -33,8 +33,8 @@
 
     <?php
         if($_POST){
-            $valor1 = $_POST['vrl1'];
-            $valor2 = $_POST['vrl2'];
+            $valor1 = $_POST['vlr1'];
+            $valor2 = $_POST['vlr2'];
             $operacao = $_POST['operacao'];
 
             echo "<h2>Resultado:</h2>";
@@ -53,7 +53,7 @@
                     if ($valor2 != 0) {
                         echo "<p> $valor1 / $valor2 =" . ($valor1 / $valor2) . "</P>";
                     } else {
-                        echo "<p>Erro: Não é permitido a divisão por zero.</p>"/
+                        echo "<p>Erro: Não é permitido a divisão por zero.</p>";
                     } 
                     break;
             }
